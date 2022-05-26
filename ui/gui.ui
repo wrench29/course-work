@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <object class="GtkAdjustment" id="adjustment1">
+    <property name="upper">100</property>
+    <property name="lower">1</property>
+    <property name="value">1</property>
+    <property name="step-increment">1</property>
+    <property name="page-increment">10</property>
+  </object>
+  <object class="AdwWindow" id="window">
+    <property name="default-width">900</property>
+    <property name="default-height">600</property>
+    <property name="content">
+      <object class="GtkBox">
+        <property name="visible">1</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkHeaderBar">
+            <property name="visible">1</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">1</property>
+            <property name="orientation">horizontal</property>
+            <child>
+              <object class="GtkBox">
+                <property name="visible">1</property>
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label" translatable="1">Новый заказ:</property>
+                    <property name="margin-top">4</property>
+                    <property name="margin-bottom">4</property>
+                    <property name="margin-start">4</property>
+                    <property name="margin-end">4</property>
+                    <property name="justify">center</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="orientation">horizontal</property>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label" translatable="1">Фамилия:</property>
+                        <property name="margin-top">4</property>
+                        <property name="margin-bottom">4</property>
+                        <property name="margin-start">4</property>
+                        <property name="margin-end">4</property>
+                        <property name="justify">left</property>
+                      </object>
+                    </child>
+                    <child>
+                        <object class="GtkEntry" id="lastName">
+                          <property name="hexpand">1</property>
+                          <property name="margin-top">4</property>
+                          <property name="margin-bottom">4</property>
+                          <property name="margin-start">4</property>
+                          <property name="margin-end">4</property>
+                          <property name="focusable">1</property>
+                          <property name="margin-start">4</property>
+                          <property name="margin-end">4</property>
+                          <property name="placeholder-text" translatable="1">Фамилия заказчика</property>
+                        </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label" translatable="1">Улица:</property>
+                        <property name="margin-top">4</property>
+                        <property name="margin-bottom">4</property>
+                        <property name="margin-start">4</property>
+                        <property name="margin-end">4</property>
+                        <property name="justify">left</property>
+                      </object>  
+                    </child>
+                    <child>
+                      <object class="GtkEntry" id="street">
+                        <property name="hexpand">1</property>
+                        <property name="margin-top">4</property>
+                        <property name="margin-bottom">4</property>
+                        <property name="margin-start">4</property>
+                        <property name="margin-end">4</property>
+                        <property name="hexpand">1</property>
+                        <property name="focusable">1</property>
+                        <property name="placeholder-text" translatable="1">Улица</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Дом:</property>
+                        <property name="margin-top">4</property>
+                        <property name="margin-bottom">4</property>
+                        <property name="margin-start">4</property>
+                        <property name="margin-end">4</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkEntry" id="building">
+                        <property name="hexpand">1</property>
+                        <property name="margin-top">4</property>
+                        <property name="margin-bottom">4</property>
+                        <property name="margin-start">4</property>
+                        <property name="margin-end">4</property>
+                        <property name="focusable">1</property>
+                        <property name="placeholder-text" translatable="1">Дом</property>
+                        <property name="input-purpose">number</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Квартира:</property>
+                        <property name="margin-top">4</property>
+                        <property name="margin-bottom">4</property>
+                        <property name="margin-start">4</property>
+                        <property name="margin-end">4</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkEntry" id="apartment">
+                        <property name="hexpand">1</property>
+                        <property name="margin-top">4</property>
+                        <property name="margin-bottom">4</property>
+                        <property name="margin-start">4</property>
+                        <property name="margin-end">4</property>
+                        <property name="focusable">1</property>
+                        <property name="placeholder-text" translatable="1">Квартира</property>
+                        <property name="input-purpose">number</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Телефон:</property>
+                        <property name="margin-top">4</property>
+                        <property name="margin-bottom">4</property>
+                        <property name="margin-start">4</property>
+                        <property name="margin-end">4</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkEntry" id="phone">
+                        <property name="hexpand">1</property>
+                        <property name="focusable">1</property>
+                        <property name="margin-top">4</property>
+                        <property name="margin-bottom">4</property>
+                        <property name="margin-start">4</property>
+                        <property name="margin-end">4</property>
+                        <property name="placeholder-text" translatable="1">Номер телефона</property>
+                        <property name="input-purpose">number</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="margin-start">4</property>
+                    <property name="margin-end">4</property>
+                    <property name="margin-top">4</property>
+                    <property name="margin-bottom">4</property>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="hexpand">1</property>
+                        <property name="label" translatable="1">Выберите пиццу и количество каждой:</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="addPizzas">
+                        <property name="label" translatable="1">Добавить</property>
+                        <property name="focusable">1</property>
+                        <property name="receives-default">1</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox" id="pizzaSelectBox">
+                    <property name="orientation">vertical</property>
+                    <property name="margin-top">4</property>
+                    <property name="margin-bottom">4</property>
+                    <property name="margin-start">4</property>
+                    <property name="margin-end">4</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkSeparator">
+                    <property name="orientation">horizontal</property>
+                    <property name="hexpand">1</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="statusLabel">
+                    <property name="margin-top">4</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="order">
+                    <property name="valign">center</property>
+                    <property name="label" translatable="1">Сделать заказ</property>
+                    <property name="focusable">1</property>
+                    <property name="receives-default">1</property>
+                    <property name="margin-start">4</property>
+                    <property name="margin-end">4</property>
+                    <property name="margin-top">4</property>
+                    <property name="margin-bottom">4</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkSeparator">
+                <property name="orientation">vertical</property>
+                <property name="vexpand">1</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="hexpand">1</property>
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label" translatable="1">Все заказы:</property>
+                    <property name="margin-top">4</property>
+                    <property name="margin-bottom">4</property>
+                    <property name="margin-start">128</property>
+                    <property name="margin-end">128</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkScrolledWindow" id="ordersList">
+                    <property name="vexpand">1</property>
+                    <child>
+                      <object class="GtkListBox" id="ordersListBox">
+                        <child>
+                        </child>
+                      </object> 
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="orientation">horizontal</property>
+                    <child>
+                      <object class="GtkButton" id="sortButton">
+                        <property name="label" translatable="1">Сортировка</property>
+                        <property name="hexpand">1</property>
+                        <property name="margin-top">4</property>
+                        <property name="margin-bottom">4</property>
+                        <property name="margin-start">4</property>
+                        <property name="margin-end">4</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="searchButton">
+                        <property name="label" translatable="1">Поиск</property>
+                        <property name="hexpand">1</property>
+                        <property name="margin-top">4</property>
+                        <property name="margin-bottom">4</property>
+                        <property name="margin-start">4</property>
+                        <property name="margin-end">4</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </property>
+  </object>
+</interface>
